@@ -20,7 +20,7 @@
     >
       <a-camera gps-new-camera></a-camera>
       <a-entity
-        gltf-model="url(https://github.com/HarisHassan555/glbfiles/raw/3f218e1886ef19abfbff119b3c65240021a798e4/ecds_old_building_09.glb)"
+        gltf-model="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf"
         position="0 4 0"
         gps-new-entity-place="latitude: 31.439318; longitude: 74.369099"
         scale="3 3 3"
@@ -40,31 +40,7 @@
         })
         .then(data=>{
           console.log(data); 
-         // Ensure data is an array
-         if (Array.isArray(data)) {
-            // Create entities and append them to the scene
-            const scene = document.querySelector('a-scene');
-
-            data.forEach(element => {
-              // Extract name, latitude, longitude, and image file URL
-              const name = element.name;
-              const latitude = element.coordinates.lat; // Access latitude
-              const longitude = element.coordinates.lng; // Access longitude
-              const fileUrl = element.File; // Access file URL
-
-              // Create and append the entity
-              const entityHTML = createEntity(name, latitude, longitude, fileUrl);
-              const tempDiv = document.createElement('div');
-              tempDiv.innerHTML = entityHTML;
-              scene.appendChild(tempDiv.firstChild);
-            });
-          } else {
-            console.error('Expected an array but got:', data);
-          }
-        })
-        .catch(error => {
-          console.error('Error fetching data:', error);
-        });
+         });
     </script>
   </body>
 </html>
