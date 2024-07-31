@@ -19,28 +19,46 @@
       renderer="antialias: true; alpha: true"
     >
       <a-camera gps-new-camera></a-camera>
-      <a-entity
+      <!-- <a-entity
         gltf-model= "https://raw.githubusercontent.com/HarisHassan555/glbfiles/main/building_no_6_form_tokyo_otemachi_building_pack/scene.gltf"
         position="0 -4 0"
         gps-new-entity-place="latitude: 31.439318; longitude: 74.369099"
         scale="0.03 0.03 0.03"
-      ></a-entity>
-      <!-- <a-entity
+      ></a-entity> -->
+      <a-entity
         gltf-model="./scene.gltf"
         position="0 -1 0"
         gps-new-entity-place="latitude: 31.439318; longitude: 74.369099"
         scale="0.05 0.05 0.05"
-      ></a-entity> -->
+      ></a-entity>
       <!-- <a-entity material='color: red' position="0 -1 0" geometry='primitive: box' gps-new-entity-place="latitude: 31.439318; longitude: 74.369099" scale="0.5 0.5 0.5"></a-entity> -->
     </a-scene>
+    <iframe
+      src="https://www.chatbase.co/chatbot-iframe/o2V33Y8riGSuHDl2jzOk_"
+      width="100%"
+      style="height: 100%; min-height: 700px"
+      frameborder="0"
+    ></iframe>
     <script>
-        fetch('https://backend-two-mu-64.vercel.app/buildings')
-        .then(res=>{
+      window.embeddedChatbotConfig = {
+        chatbotId: "o2V33Y8riGSuHDl2jzOk_",
+        domain: "www.chatbase.co",
+      };
+    </script>
+    <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="o2V33Y8riGSuHDl2jzOk_"
+      domain="www.chatbase.co"
+      defer
+    ></script>
+    <script>
+      fetch("https://backend-two-mu-64.vercel.app/buildings")
+        .then((res) => {
           return res.json();
         })
-        .then(data=>{
-          console.log(data); 
-         });
+        .then((data) => {
+          console.log(data);
+        });
     </script>
   </body>
 </html>
